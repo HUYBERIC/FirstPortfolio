@@ -6,16 +6,19 @@
     <title>HUYBRECHTS Eric - FullStack WebDev</title>
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="./IWS-LOGO.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 <!-- H E A D E R -->
 <header class="header">
-    <a href="#home" class="logo">Eric <span>Huybrechts</span></a>
+    <a href="#hero" class="logo">Eric <span>Huybrechts</span></a>
     
     <i class='bx bx-menu' id="menu-icon"></i>
     
     <nav class="navbar">
-        <a href="#home" class="active">Home</a>
+        <!-- <a href="#hero" class="active">Home</a> -->
         <a href="#about">About Me</a>
         <a href="#education">Education</a>
         <a href="#services">Services</a>
@@ -26,17 +29,18 @@
 </header> 
 <!-- H E R O -->
 
-<section class="hero" id="home">
-    <div class="hero-content">
+
+<section class="hero" id="hero">
+    <div class="hero-content" data-aos="fade-right">
         <h1>Hi, It's <span>Eric</span></h1>
-        <h3>I'm a <span>Web Developer</span></h3>
+        <h3>I'm a <span class="multiple-text"></span></h3>
         <p>Passionate about computer science and mathematics since I was a child, I chose my passion for mathematics as my first life, at the expense of computer science. Having gotten used to digitizing everything in my first job, I realized it was time for me to thrive as a web developer. Here I am today, after daily investment, a fullstack web developer!</p>
 
         <div class="social-icons">
             <a href="#"><i class='bx bxl-linkedin' ></i></a>
             <a href="#"><i class='bx bxl-github' ></i></a>
-            <a href="#"><i class='bx bxl-instagram' ></i></a>
             <a href="#"><i class='bx bxl-discord-alt' ></i></a>
+            <a class="fiverrDiv" href="#"><img class="fiverr" src="/img/fiverr.svg" alt=""></a>
         </div>
         
         <div class="btn-group">
@@ -45,20 +49,21 @@
         </div>
     </div>
     
-    <div class="home-img">
+    <div class="hero-img"data-aos="fade-left">
         <img src="img/memoji2.png" alt="">
     </div>
 </section>
+
 
 <!-- F I R S T _ S E C T I O N _ A B O U T -->
 
 <section class="about" id="about">
 
-    <div class="about-img">
+    <div class="about-img" data-aos="fade-right">
         <img src="img/memoji3.png" alt="">
     </div>
 
-    <div class="about-content">
+    <div class="about-content" data-aos="fade-left">
         <h2>About <span>Me</span></h2>
         <p>I'm a 28-year-old Belgian, proud pet parent to Tiddy, my border collie, and two cats, Sushi and Lewy. Self-taught in most of my skills, I’m always learning to stay on top of the latest tech. With near-perfect mastery of HTML, CSS, and JavaScript, I'm constantly adding new skills to my toolkit for even greater versatility.</p>
         <!-- En faire une modal? -->
@@ -79,7 +84,7 @@
                 <div class="timeline-date">
                     2014
                 </div>
-                <div class="timeline-content">
+                <div class="timeline-content" data-aos="fade-right">
                     <h3>Secondary Education</h3>
                     <p>Graduated in General Studies with a focus on Economic Sciences.</p>
                 </div>
@@ -90,7 +95,7 @@
                 <div class="timeline-date">
                     2020
                 </div>
-                <div class="timeline-content">
+                <div class="timeline-content" data-aos="fade-left">
                     <h3>Higher Education (University College)</h3>
                     <p>Graduated as a Mathematics Teacher, qualified to teach in lower secondary education (first and second cycles).</p>
                 </div>
@@ -101,7 +106,7 @@
                 <div class="timeline-date">
                     2025
                 </div>
-                <div class="timeline-content">
+                <div class="timeline-content" data-aos="fade-right">
                     <h3>Professional Training - Career Change</h3>
                     <p>Fullstack Web Developer training with a 2-month internship at Liège Airport.</p>
                 </div>
@@ -154,89 +159,158 @@
     <div class="projects-box">
         <h2 class="heading">Projects</h2>
 
+        <!-- S W I P E R -->
         <div class="wrapper">
-            <a href="https://huyberic.github.io/UltimateProjectCSS" target="_blank" rel="noopener noreferrer">
-                <div class="project-item">
-                    <img src="mockup/UPDesk.png" alt="project-1">
-                    <h2>GalaxyProjectCSS</h2>
-                    <p>Difficulty: </p>
-                    <div class="rating">
-                        <i class='bx bxs-star' id="star"></i>
-                        <i class='bx bxs-star' id="star"></i>
-                        <i class='bx bxs-star' id="star"></i>
-                        <i class='bx bx-star' id="star"></i>
-                        <i class='bx bx-star' id="star"></i>
-                    </div>
-                </div>
-            </a>
 
-            <a href="https://huyberic.github.io/TheFinalProjectCss" target="_blank" rel="noopener noreferrer">
-                <div class="project-item">
-                    <img src="mockup/FPDesk.png" alt="project-1">
-                    <h2>ClassicProjectCSS</h2>
-                    <p>Difficulty: </p>
-                    <div class="rating">
-                        <i class='bx bxs-star' id="star"></i>
-                        <i class='bx bx-star' id="star"></i>
-                        <i class='bx bx-star' id="star"></i>
-                        <i class='bx bx-star' id="star"></i>
-                        <i class='bx bx-star' id="star"></i>
+            <div class="project-item">
+                <h2>ClassicProjectCSS</h2>
+                <h3>First responsive project</h3>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="mockup/FPDesk.png" alt="project-1">
                     </div>
-                </div>
-            </a>
-
-            <a href="https://huyberic.github.io/DesignCreative" target="_blank" rel="noopener noreferrer">
-                <div class="project-item">
-                    <img src="mockup/CDDesk.png" alt="project-1">
-                    <h2>Design Creative</h2>
-                    <p>Difficulty: </p>
-                    <div class="rating">
-                        <i class='bx bxs-star' id="star"></i>
-                        <i class='bx bxs-star' id="star"></i>
-                        <i class='bx bxs-star' id="star"></i>
-                        <i class='bx bxs-star' id="star"></i>
-                        <i class='bx bx-star' id="star"></i>
+                    <div class="swiper-slide">
+                        <img src="mockup/FPTablet.png" alt="project-1">
                     </div>
-                </div>
-            </a>
-
-            <a href="https://huyberic.github.io/TheMealDB" target="_blank" rel="noopener noreferrer">
-                <div class="project-item">
-                    <img src="mockup/MealDesk.png" alt="project-1">
-                    <h2>TheMealDB</h2>
-                    <p>Difficulty: </p>
-                    <div class="rating">
-                        <i class='bx bxs-star' id="star"></i>
-                        <i class='bx bxs-star' id="star"></i>
-                        <i class='bx bx-star' id="star"></i>
-                        <i class='bx bx-star' id="star"></i>
-                        <i class='bx bx-star' id="star"></i>
+                    <div class="swiper-slide">
+                        <img src="mockup/FPMobile.png" alt="project-1">
                     </div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-scrollbar"></div>
                 </div>
-            </a>
+                <p>September 2024</p>
+                <a href="https://huyberic.github.io/TheFinalProjectCss/" target="_blank" rel="noopener noreferrer"><button class="btn">LINK</button></a>
+            </div>
+            <div class="project-item">
+                <h2>GalaxyProjectCSS</h2>
+                <h3>First big project</h3>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="mockup/UPDesk.png" alt="project-1">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="mockup/UPTablet.png" alt="project-1">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="mockup/UPMobile.png" alt="project-1">
+                            </div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-scrollbar"></div>
+                    </div>
+                    <p>October 2024</p>
+                    <a href="https://huyberic.github.io/UltimateProjectCSS/" target="_blank" rel="noopener noreferrer"><button class="btn">LINK</button></a>
+            </div>
 
+            <div class="project-item">
+                <h2>CreativeDesign</h2>
+                <h3>Full responsive project</h3>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="mockup/CDDesk.png" alt="project-1">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="mockup/CDTablet.png" alt="project-1">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="mockup/CDMobile.png" alt="project-1">
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-scrollbar"></div>
+                </div>
+                <p>October 2024</p>
+                <a href="https://huyberic.github.io/DesignCreative/" target="_blank" rel="noopener noreferrer"><button class="btn">LINK</button></a>
+            </div>
+
+
+            <div class="project-item">
+                <h2>TheMealDB</h2>
+                <h3>First API project</h3>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="mockup/MealDesk.png" alt="project-1">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="mockup/MealTablet.png" alt="project-1">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="mockup/MealMobile.png" alt="project-1">
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-scrollbar"></div>
+                </div>
+                <p>November 2024</p>
+                <a href="https://huyberic.github.io/TheMealDB/" target="_blank" rel="noopener noreferrer"><button class="btn">LINK</button></a>
+            </div>
+
+            <div class="project-item">
+                <h2>TheMovieDB</h2>
+                <h3>Desktop only</h3>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="mockup/TMDBDesk.png" alt="project-1">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="mockup/TMDBDesk2.png" alt="project-1">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="mockup/TMDSearch.png" alt="project-1">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="mockup/TMDBHover.png" alt="project-1">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="mockup/TMDBModal.png" alt="project-1">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="mockup/TMDBLogin.png" alt="project-1">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="mockup/TMDSignUp.png" alt="project-1">
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-scrollbar"></div>
+                </div>
+                <p>November 2024</p>
+                <a href="https://huyberic.github.io/BeMovies/" target="_blank" rel="noopener noreferrer"><button class="btn">LINK</button></a>
+            </div>
+            
         </div>
     </div>
 </section>
 <!-- F O R M S -->
 <section class="contact" id="contact">
-    <h2 class="heading">Contact <span>Me</span></h2>
+    <h2 class="heading" data-aos="fade-right">Contact <span>Me</span></h2>
     
-    <form action="">
+    <form action="" data-aos="fade-left">
         <div class="input-group">
             <div class="input-box">
-                <input type="text" placeholder="Full name" id="fullName">
-                <input type="text" placeholder="email" id="email">
+                <input type="text" placeholder="Full name" id="fullName" autocomplete="off">
+                <input type="text" placeholder="email" id="email" autocomplete="off">
             </div>
     
             <div class="input-box">
-                <input type="number" placeholder="Phone Number" id:="phoneNumber">
-                <input type="text" placeholder="Subject" id="subject">
+                <input type="number" placeholder="Phone Number" id:="phoneNumber" autocomplete="off">
+                <input type="text" placeholder="Subject" id="subject" autocomplete="off">
             </div>
         </div>
     
         <div class="input-group-2">
-            <textarea name="" id="textarea" cols="30" rows="10" placeholder="Your Message"></textarea>
+            <textarea name="" id="textarea" cols="30" rows="10" placeholder="Your Message" autocomplete="off"></textarea>
             <input type="submit" value="Send Message" class="btn">
         </div>
     
@@ -249,13 +323,13 @@
     <div class="social">
         <a href="#"><i class='bx bxl-linkedin' ></i></a>
         <a href="#"><i class='bx bxl-github' ></i></a>
-        <a href="#"><i class='bx bxl-instagram' ></i></a>
         <a href="#"><i class='bx bxl-discord-alt' ></i></a>
+        <a class="fiverrDiv" href="#"><img class="fiverr" src="/img/fiverr.svg" alt=""></a>
     </div>
 
     <ul class="list">
         <li>
-            <a href="#home">About Me</a>
+            <a href="#about">About Me</a>
         </li>
 
         <li>
@@ -280,6 +354,10 @@
 
 </footer>
 <!-- S C R I P T -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="app.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>AOS.init();</script>
 </body>
 </html>

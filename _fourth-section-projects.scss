@@ -6,53 +6,70 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        h2{
-            font-size: 2.8rem;
-        }
         .heading{
             margin-bottom: 5rem;
+            font-size: 8rem;
+            text-align: center;
+            margin: 5rem 0;
         }
         .wrapper{
             display:grid;
-            grid-template-columns: repeat(2,1fr);
-            grid-template-rows: repeat(2,1fr);
+            grid-template-columns:  repeat(auto-fill, minmax(450px, 1fr));
             gap: 3rem;
+            min-width: 100%;
+            padding: 10rem 15%;
             .project-item{
-                min-height: 550px;
-                max-width: 450px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                height: 70rem;
                 background: rgba(0,0,0,0.7);
                 border: 3px solid rgba(238,238,238,0.2);
                 border-radius: 2rem;
                 margin: 0 2rem;
-                padding: 30px 60px;
-                cursor: pointer;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                text-align: center;
-                gap: 1.5rem;
-                color: white;
-                transition: 0.4s ease-in-out;
-                &:hover{
-                    border: 3px solid $main-color;
-                    transform: translateY(-10px)scale((1.03));
-                    box-shadow: 0 0 50px $main-color;
+                padding: 20px;
+                h2{
+                    font-size: 2.8rem;
+                    padding-bottom: 15px;
+                    color: $main-color;
                 }
-                img{
-                    width: 40rem;
-                    border-radius: 20px;
-                    border: 3px solid $main-color;
-                    box-shadow: 0 0 25px $main-color;
+                h3{
+                    font-size: 2rem;
+                    font-weight: 300;
+                    margin-top: -20px;
+                    margin-bottom: 20px;
                 }
-                .rating{
-                    #star{
-                        color: gold;
-                        font-size: 2rem;
+                .mySwiper{
+                    width: 100%;
+                    .swiper-wrapper{                        
+                        display: flex;
+                        align-items: center;
+                        .swiper-slide{
+                            width: 100%;
+                            img{
+                                width: 404px;
+                                max-width: 100%;
+                                border-radius: 20px;
+                                height: 404px;
+                                aspect-ratio: 1;
+                            }
+                        }                
+                    }
+                    .swiper-button-next, .swiper-button-prev {
+                        color: $main-color;
+                        z-index: 10;
+                        &::after {
+                            font-size: 3rem;
+                            font-weight: 800;
+                        }
                     }
                 }
                 p{
-                    font-size: 1.3rem;
+                    font-size: 1.4rem;
+                    font-weight: 600;
+                    line-height: 1.7;
+                    padding: 20px 0;
                 }
             }
         }

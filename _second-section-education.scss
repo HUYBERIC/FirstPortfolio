@@ -82,3 +82,30 @@
         }
     }
 }
+
+// ---- R E S P O N S I V E ---- //
+
+@media (max-width: 1285px){
+    .first-section-education{
+        .timeline-items{
+            &::before{
+                left: 7px;
+            }
+            .timeline-item{
+                &:last-child{
+                }
+                &:nth-child(odd){
+                    padding-right: 0;
+                    text-align: left;
+                    padding-left: 37px;
+                }
+                &:nth-child(even){
+                    padding-left: 37px;
+                }
+                .timeline-dot{
+                    left: 0px;
+                }
+            }
+        }
+    }
+}

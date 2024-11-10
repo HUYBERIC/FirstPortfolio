@@ -30,7 +30,7 @@
         color: $text-color;
         margin-left: 4rem;
         font-weight: 500;
-        transform: 0.3 ease-in-out;
+        transition: 0.3 ease-in-out;
         border-bottom: 3px solid transparent;
         &:hover{
             color: $main-color;
@@ -50,6 +50,42 @@
         text-wrap: nowrap;
         &:hover{
             transform: scale(1.05);
+        }
+    }
+}
+
+// ---- R E S P O N S I V E ---- //
+
+@media (max-width: 1285px){
+    .header{
+        #menu-icon{
+            display: block;
+        }
+        .navbar{
+            position: absolute;
+            top: 100%;
+            right: 0;
+            width: 40%;
+            padding: 1rem 3rem;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-bottom-left-radius: 2rem;
+            border-left: 2px solid $main-color;
+            border-bottom: 2px solid $main-color;
+            display: none;
+            a{
+                display: block;
+                font-size: 2rem;
+                margin: 3rem 0;
+                color: $text-color;
+                position: relative;
+                text-align: center;
+            }
+            &.active{
+                display: block;
+            }
+        }
+        .gradient-btn{
+            display: none;
         }
     }
 }

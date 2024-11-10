@@ -31,3 +31,23 @@
         margin: 3rem 0;
     }
 }
+
+// ---- R E S P O N S I V E ---- //
+
+@media (max-width: 1285px){
+    #about{
+        flex-direction: column-reverse;
+        text-align: center;
+        .about-content{
+            h2{
+                text-align: center;
+                margin: 2rem 0;
+            }
+        }
+        .about-image{
+            img{
+                width: 52vw;
+            }
+        }
+    }
+}

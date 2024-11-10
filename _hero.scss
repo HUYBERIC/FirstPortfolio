@@ -17,6 +17,9 @@
         h3{
             margin: 1rem 0;
             font-size: 4rem;
+            .multiple-text {
+                caret-color: transparent;
+            }
         }
         p{
             font-size: 1.5rem;
@@ -36,11 +39,36 @@
                 color: $main-color;
                 margin: 3rem 0.5rem;
                 transition: 0.3s ease-in-out;
+                vertical-align: middle;
                 &:hover{
                     color: $third-color;
                     background-color: $main-color;
                     transform: scale(1.2)translateY(-5px);
                     box-shadow: 0 0 25px $main-color;
+                }
+            }
+            .fiverrDiv{
+                vertical-align: middle;
+                width: 52px;
+                height: 51.98px;
+                .fiverr{
+                    padding: 0;
+                    background-color: $main-color;
+                    border-radius: 50%;
+                    width: 28.81px;
+                    height: 29px;
+                    transition: 0.3s ease-in-out;
+                    path{
+                        fill: $main-color;
+                    }
+                }
+                &:hover{
+                    background-color: $main-color;
+                    .fiverr{
+                        path {
+                            fill: white;
+                        }
+                    }
                 }
             }
         }
@@ -80,7 +108,7 @@
             }
         }
     }
-    .home-img{
+    .hero-img{
         img{
             width: 32vw;
             border-radius: 50%;
@@ -91,6 +119,25 @@
                 box-shadow: 0 0 25px $main-color,
                                 0 0 50px $main-color,
                                 0 0 100px $main-color;
+            }
+        }
+    }
+}
+
+// ---- R E S P O N S I V E ---- //
+
+@media (max-width: 1285px){
+    .hero{
+        flex-direction: column-reverse;
+        margin: 5rem 0;
+        gap: 5rem;
+        .hero-content{
+            align-items: center;
+            text-align: center;
+        }
+        .hero-img{
+            img{
+                width: 56vw;
             }
         }
     }

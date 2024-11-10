@@ -27,6 +27,28 @@ footer{
                 box-shadow: 0 0 25px $main-color;
             }
         }
+        .fiverrDiv{
+            width: 42px;
+            height: 42px;
+            display: inline-flex;
+            justify-content: center;
+            .fiverr{
+                padding: 0;
+                background-color: $main-color;
+                border-radius: 50%;
+                width: 25px;
+                height: 25px;
+                transition: 0.3s ease-in-out;
+                padding:auto 0;
+                justify-self: center;
+                align-self: center;
+            }
+            &:hover{
+                background-color: $main-color;
+                justify-content: center;
+                align-items: center;
+            }
+        }
     }
     ul{
         margin-top: 0;
@@ -49,6 +71,7 @@ footer{
         }
     }
     p{
-
+        text-align: center;
+        margin-top: 40px;
     }
 }

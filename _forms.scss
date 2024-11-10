@@ -69,5 +69,10 @@
     }
 }
 
+// ---- R E S P O N S I V E ---- //
 
-
+@media (max-width: 1285px){
+    form{
+        flex-direction: column;
+    }
+}
