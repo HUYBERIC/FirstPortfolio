@@ -25,11 +25,24 @@
             border: 5px solid transparent;
             cursor: pointer;
             transition: 0.4s ease-in-out;
+            .comingSoon{
+                font-size: 1rem;
+                opacity: 0;
+                position: absolute;
+                bottom: -40px;
+                color: $text-color;
+                transition: 0.4s ease-in-out;
+                
+            }
             &:hover{
                 background: $second-bg-color;
                 color: $main-color;
                 border: 5px solid $main-color;
                 transform: scale(1.03);
+                .comingSoon{
+                    opacity: 1;
+                    font-size: 1rem;
+                }
             }
             .service-info{
                 display: flex;
@@ -38,6 +51,8 @@
                 justify-content: center;
                 align-items: center;
                 padding: 5rem;
+                transition: 0.4 ease-in-out;
+                position: relative;
                 i{
                     font-size: 8rem;
                 }

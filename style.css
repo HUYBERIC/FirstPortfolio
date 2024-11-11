@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 * {
   margin: 0;
@@ -51,6 +52,51 @@ a {
   color: #FBCAEF;
 }
 
+.custom-popup-class {
+  background-color: #080808;
+  border: 2px solid #FBCAEF;
+  box-shadow: 0 0 25px #FBCAEF;
+}
+
+.custom-title-class {
+  font-size: 3rem;
+  color: #FBCAEF;
+}
+
+.custom-icon-class {
+  font-size: 20px;
+  position: relative;
+}
+.custom-icon-class:after {
+  content: "✔";
+  position: absolute;
+  font-size: 6rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  color: #080808;
+  z-index: 2;
+  animation: checkmark-appear 0.5s ease-out forwards;
+}
+
+.custom-icon-class .swal2-success-line-tip,
+.custom-icon-class .swal2-success-line-long,
+.custom-icon-class .swal2-success-ring,
+.custom-icon-class .swal2-success-fix,
+.custom-icon-class .swal2-success-circular-line-left,
+.custom-icon-class .swal2-success-circular-line-right {
+  background-color: #FBCAEF;
+}
+
+.hidden {
+  display: none;
+}
+
+.no-scroll {
+  overflow-y: hidden;
+  width: 100%;
+}
+
 .swiper {
   width: 300px;
   height: 600px;
@@ -74,6 +120,20 @@ input::-webkit-outer-spin-button {
   margin: 0;
 }
 
+@keyframes checkmark-appear {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0); /* Départ avec scale 0 pour l'effet d'apparition */
+  }
+  60% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.2); /* Légère "expansion" */
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1); /* Revenir à l'échelle normale */
+  }
+}
 .header {
   position: fixed;
   width: 100%;
@@ -211,6 +271,22 @@ input::-webkit-outer-spin-button {
   transform: scale(1.2) translateY(-5px);
   box-shadow: 0 0 25px #FBCAEF;
 }
+.hero .hero-content .social-icons .discordBtn {
+  position: relative;
+  cursor: pointer;
+}
+.hero .hero-content .social-icons .discordBtn p {
+  position: absolute;
+  bottom: -22px;
+  text-wrap: nowrap;
+  opacity: 0;
+  font-size: 1rem;
+  transition: 0.3s ease;
+}
+.hero .hero-content .social-icons .discordBtn:hover p {
+  opacity: 1;
+  color: #FBCAEF;
+}
 .hero .hero-content .social-icons .fiverrDiv {
   vertical-align: middle;
   width: 52px;
@@ -224,20 +300,14 @@ input::-webkit-outer-spin-button {
   height: 29px;
   transition: 0.3s ease-in-out;
 }
-.hero .hero-content .social-icons .fiverrDiv .fiverr path {
-  fill: #FBCAEF;
-}
 .hero .hero-content .social-icons .fiverrDiv:hover {
   background-color: #FBCAEF;
 }
-.hero .hero-content .social-icons .fiverrDiv:hover .fiverr path {
-  fill: white;
-}
-.hero .hero-content .btn-group {
+.hero .btn-group {
   display: flex;
   gap: 1.5rem;
 }
-.hero .hero-content .btn-group .btn {
+.hero .btn-group .btn {
   display: inline-block;
   color: black;
   padding: 1rem 3rem;
@@ -249,31 +319,33 @@ input::-webkit-outer-spin-button {
   font-weight: 600;
   transition: 0.3s ease-in-out;
 }
-.hero .hero-content .btn-group .btn:hover {
+.hero .btn-group .btn:hover {
   transform: scale(1.05);
   box-shadow: 0 0 25px #FBCAEF, 0 0 50px #FBCAEF, 0 0 100px #FBCAEF;
   background-color: black;
   color: #FBCAEF;
 }
-.hero .hero-content .btn-group .btn:nth-last-of-type(1) {
+.hero .btn-group .btn:nth-last-of-type(1) {
   background-color: black;
   color: #FBCAEF;
   border: 2px solid #FBCAEF;
   box-shadow: 0 0 25px transparent;
 }
-.hero .hero-content .btn-group .btn:nth-last-of-type(1):hover {
+.hero .btn-group .btn:nth-last-of-type(1):hover {
   box-shadow: 0 0 25px #FBCAEF;
   background-color: #FBCAEF;
   color: black;
+  box-shadow: 0 0 25px #FBCAEF, 0 0 50px #FBCAEF;
 }
-.hero .hero-img img {
+
+.hero-img img {
   width: 32vw;
   border-radius: 50%;
   background-color: #FBCAEF;
   box-shadow: 0 0 25px #FBCAEF;
   transition: 0.4s ease-in-out;
 }
-.hero .hero-img img:hover {
+.hero-img img:hover {
   box-shadow: 0 0 25px #FBCAEF, 0 0 50px #FBCAEF, 0 0 100px #FBCAEF;
 }
 
@@ -291,6 +363,249 @@ input::-webkit-outer-spin-button {
     width: 56vw;
   }
 }
+.modal-read-more .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  backdrop-filter: blur(2px);
+}
+.modal-read-more .modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #000;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 70vw;
+  max-width: 1000px;
+  z-index: 20;
+  box-shadow: 0 0 15px #FBCAEF;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 6rem 3rem;
+  gap: 6rem;
+  overflow: hidden;
+}
+.modal-read-more .modal .closing-modal {
+  font-size: 30px;
+  color: #FBCAEF;
+  align-self: flex-start;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  transition: 0.3s ease;
+}
+.modal-read-more .modal .closing-modal:hover {
+  transform: scale(1.1);
+}
+.modal-read-more .modal .modal-img {
+  height: 70%;
+}
+.modal-read-more .modal .modal-img img {
+  border-radius: 50%;
+  box-shadow: 0 0 15px #FBCAEF;
+  background-color: #FBCAEF;
+  width: 22vw;
+  max-height: 400px;
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
+}
+.modal-read-more .modal .modal-img img:hover {
+  box-shadow: 0 0 25px #FBCAEF, 0 0 50px #FBCAEF;
+}
+.modal-read-more .modal .modal-content {
+  display: flex;
+  flex-direction: column;
+}
+.modal-read-more .modal .modal-content div {
+  display: flex;
+  flex-direction: row;
+  align-self: start;
+  gap: 10px;
+}
+.modal-read-more .modal .modal-content h3 {
+  text-align: left;
+  font-size: 2rem;
+  text-decoration: underline;
+  width: 150px;
+}
+.modal-read-more .modal .modal-content p {
+  text-align: center;
+  align-self: flex-end;
+  font-size: 2rem;
+}
+.modal-read-more .modal .modal-content li {
+  text-decoration: none;
+  list-style-type: none;
+  align-self: center;
+  font-size: 2rem;
+}
+.modal-read-more .modal .modal-content .overline {
+  color: red;
+  text-decoration: line-through;
+  text-decoration-color: white;
+  text-decoration-thickness: 2px;
+}
+
+@media (max-width: 1285px) {
+  .modal-read-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .modal-read-more .modal {
+    display: flex;
+    flex-direction: column;
+    max-height: 70vh;
+    overflow-y: auto;
+  }
+  .modal-read-more .modal .modal-content li {
+    text-align: left;
+  }
+}
+.modal-skills .overlay-skills {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  backdrop-filter: blur(2px);
+}
+.modal-skills .modal-for-skills {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #000;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 70vw;
+  max-width: 700px;
+  z-index: 20;
+  box-shadow: 0 0 15px #FBCAEF;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 6rem 3rem;
+  gap: 6rem;
+  overflow: hidden;
+  max-height: 90vh;
+}
+.modal-skills .modal-for-skills .closing-modal-skills {
+  font-size: 30px;
+  color: #FBCAEF;
+  align-self: flex-start;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  transition: 0.3s ease;
+}
+.modal-skills .modal-for-skills .closing-modal-skills:hover {
+  transform: scale(1.1);
+}
+.modal-skills .modal-for-skills .modal-skills-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  width: 100%;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.modal-skills .modal-for-skills .modal-skills-content div {
+  transition: 0.3s ease;
+}
+.modal-skills .modal-for-skills .modal-skills-content div:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.modal-skills .modal-for-skills .modal-skills-content h3 {
+  position: absolute;
+  top: 20px;
+  font-size: 1.5rem;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.3s ease-in-out;
+}
+.modal-skills .modal-for-skills .modal-skills-content h3:hover {
+  border-bottom: 2px solid #FBCAEF;
+}
+.modal-skills .modal-for-skills .modal-skills-content i {
+  font-size: 50px;
+  color: #FBCAEF;
+}
+.modal-skills .modal-for-skills .modal-skills-content img {
+  padding: 0;
+  margin: 0;
+  width: 50px;
+  height: auto;
+  border-radius: 5px;
+}
+.modal-skills .modal-for-skills .modal-skills-content .html {
+  color: #dd4b24;
+}
+.modal-skills .modal-for-skills .modal-skills-content .css {
+  color: #0173b7;
+}
+.modal-skills .modal-for-skills .modal-skills-content .tailwinds {
+  color: #35bef8;
+}
+.modal-skills .modal-for-skills .modal-skills-content .php {
+  color: #8a93bd;
+}
+.modal-skills .modal-for-skills .modal-skills-content .git {
+  color: #f05033;
+}
+.modal-skills .modal-for-skills .modal-skills-content .js {
+  color: #f4e11e;
+}
+.modal-skills .modal-for-skills .modal-skills-content .react {
+  color: #61dafb;
+}
+.modal-skills .modal-for-skills .modal-skills-content .Node-JS {
+  color: #529f41;
+}
+.modal-skills .modal-for-skills .modal-skills-content .SASS {
+  color: #cd669a;
+}
+.modal-skills .modal-for-skills .modal-skills-content .tailwinds,
+.modal-skills .modal-for-skills .modal-skills-content .php,
+.modal-skills .modal-for-skills .modal-skills-content .react,
+.modal-skills .modal-for-skills .modal-skills-content .Node-JS,
+.modal-skills .modal-for-skills .modal-skills-content .EJS {
+  position: relative;
+}
+.modal-skills .modal-for-skills .modal-skills-content .tailwinds::after,
+.modal-skills .modal-for-skills .modal-skills-content .php::after,
+.modal-skills .modal-for-skills .modal-skills-content .react::after,
+.modal-skills .modal-for-skills .modal-skills-content .Node-JS::after,
+.modal-skills .modal-for-skills .modal-skills-content .EJS::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 110%;
+  height: 5px;
+  background-color: #FBCAEF;
+  box-shadow: 0 0 50px #FBCAEF;
+}
+.modal-skills .modal-for-skills .modal-skills-content .english2 {
+  height: 33.33px;
+}
+.modal-skills .modal-for-skills .modal-skills-content .english2 img {
+  height: 100%;
+}
+
 #about {
   display: flex;
   justify-content: center;
@@ -317,6 +632,19 @@ input::-webkit-outer-spin-button {
 }
 #about .btn {
   margin: 3rem 0;
+}
+#about .btn-skills {
+  background-color: black;
+  color: #FBCAEF;
+  border: 2px solid #FBCAEF;
+  box-shadow: 0 0 25px transparent;
+  margin-left: 1rem;
+}
+#about .btn-skills:hover {
+  box-shadow: 0 0 25px #FBCAEF;
+  background-color: #FBCAEF;
+  color: black;
+  box-shadow: 0 0 25px #FBCAEF, 0 0 50px #FBCAEF;
 }
 
 @media (max-width: 1285px) {
@@ -431,6 +759,10 @@ input::-webkit-outer-spin-button {
   .first-section-education .timeline-items .timeline-item .timeline-dot {
     left: 0px;
   }
+  .first-section-education .timeline-items .timeline-item .timeline-content:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 25px #FBCAEF;
+  }
 }
 .third-section-services {
   background-color: #101010;
@@ -462,11 +794,23 @@ input::-webkit-outer-spin-button {
   cursor: pointer;
   transition: 0.4s ease-in-out;
 }
+.third-section-services .services-container .service-box .comingSoon {
+  font-size: 1rem;
+  opacity: 0;
+  position: absolute;
+  bottom: -40px;
+  color: white;
+  transition: 0.4s ease-in-out;
+}
 .third-section-services .services-container .service-box:hover {
   background: #101010;
   color: #FBCAEF;
   border: 5px solid #FBCAEF;
   transform: scale(1.03);
+}
+.third-section-services .services-container .service-box:hover .comingSoon {
+  opacity: 1;
+  font-size: 1rem;
 }
 .third-section-services .services-container .service-box .service-info {
   display: flex;
@@ -475,6 +819,8 @@ input::-webkit-outer-spin-button {
   justify-content: center;
   align-items: center;
   padding: 5rem;
+  transition: 0.4 ease-in-out;
+  position: relative;
 }
 .third-section-services .services-container .service-box .service-info i {
   font-size: 8rem;
@@ -671,6 +1017,23 @@ footer .social a:hover {
   background-color: #FBCAEF;
   color: black;
   box-shadow: 0 0 25px #FBCAEF;
+}
+footer .social .discordBtn {
+  position: relative;
+  cursor: pointer;
+}
+footer .social .discordBtn p {
+  position: absolute;
+  bottom: -40px;
+  left: -25px;
+  text-wrap: nowrap;
+  opacity: 0;
+  font-size: 1rem;
+  transition: 0.3s ease-in-out;
+}
+footer .social .discordBtn:hover p {
+  opacity: 1;
+  color: #FBCAEF;
 }
 footer .social .fiverrDiv {
   width: 42px;

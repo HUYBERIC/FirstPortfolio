@@ -37,10 +37,10 @@
         <p>Passionate about computer science and mathematics since I was a child, I chose my passion for mathematics as my first life, at the expense of computer science. Having gotten used to digitizing everything in my first job, I realized it was time for me to thrive as a web developer. Here I am today, after daily investment, a fullstack web developer!</p>
 
         <div class="social-icons">
-            <a href="#"><i class='bx bxl-linkedin' ></i></a>
-            <a href="#"><i class='bx bxl-github' ></i></a>
-            <a href="#"><i class='bx bxl-discord-alt' ></i></a>
-            <a class="fiverrDiv" href="#"><img class="fiverr" src="/img/fiverr.svg" alt=""></a>
+            <a href="https://www.linkedin.com/in/eric-huybrechts-0860a41b2/" target="_blank" rel="noopener noreferrer"><i class='bx bxl-linkedin' ></i></a>
+            <a href="https://github.com/HUYBERIC" target="_blank" rel="noopener noreferrer"><i class='bx bxl-github' ></i></a>
+            <a class="discordBtn"><i class='bx bxl-discord-alt' ></i><p>Click to copy my ID</p></a>
+            <a class="fiverrDiv" href="https://www.fiverr.com/liliktv?up_rollout=true" target="_blank" rel="noopener noreferrer"><img class="fiverr" src="/img/fiverr.png" alt=""></a>
         </div>
         
         <div class="btn-group">
@@ -66,8 +66,89 @@
     <div class="about-content" data-aos="fade-left">
         <h2>About <span>Me</span></h2>
         <p>I'm a 28-year-old Belgian, proud pet parent to Tiddy, my border collie, and two cats, Sushi and Lewy. Self-taught in most of my skills, I’m always learning to stay on top of the latest tech. With near-perfect mastery of HTML, CSS, and JavaScript, I'm constantly adding new skills to my toolkit for even greater versatility.</p>
-        <!-- En faire une modal? -->
-        <a href="#" class="btn">Read More</a>
+        <a href="" class="btn btn-read-more">Read More</a>
+        <a href="" class="btn btn-skills">Skills</a>
+    </div>
+
+    <!-- Modal Read-More -->
+    <div class="modal-read-more hidden">
+        <div class="overlay"></div>
+        <div class="modal">
+            <i class='bx bx-window-close closing-modal'></i>
+            <div class="modal-img"><img src="/img/memoji.png" alt="Hello"></div>
+            <div class="modal-content">
+                <div class="full-name">
+                    <h3>Full Name : </h3>
+                    <p>Eric <span>Huybrechts</span></p>
+                </div>
+                <div class="age">
+                    <h3>Age : </h3>
+                    <p><span>28</span> years old</p>
+                </div>
+                <div class="birthday">
+                    <h3>Birthday : </h3>
+                    <p>February <span>15th</span></p>
+                </div>
+                <div class="astro">
+                    <h3>Astro sign : </h3>
+                    <p><span>Aquarius</span></p>
+                </div>
+                <div class="fav-color">
+                    <h3>Favorite Color : </h3>
+                    <p><span class="overline">RED</span> <span>Pink</span></p>
+                </div>
+                <div class="fav-meal">
+                    <h3>Favorite Meal : </h3>
+                    <p>Minced <span>beef tartare</span> with <span>fries</span></p>
+                </div>
+                <div class="hobbies">
+                    <h3>Hobbies : </h3>
+                    <p><span>Gaming</span> , <span>Tech</span> and <span>Dogs</span></p>
+                </div>
+                <div class="strength">
+                    <h3>Strength : </h3>
+                    <ul>
+                        <li>- Fast <span>learner</span></li>
+                        <li>- <span>Self</span>-taught, <span>always</span> learning</li>
+                        <li>- <span>Problem-solver</span>, critical thinker</li>
+                    </ul>
+                </div>
+                <div class="weakness">
+                    <h3>Weakness : </h3>
+                    <ul>
+                        <li>- <span>Perfectionist</span>, overanalyze sometimes</li>
+                        <li>- Struggle with <span>delegation</span></li>
+                        <li>- Difficulty saying <span>"no"</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Skills -->
+    <div class="modal-skills hidden">
+        <div class="overlay-skills"></div>
+        <div class="modal-for-skills">
+            <i class='bx bx-window-close closing-modal-skills'></i>
+            <div class="modal-skills-content">
+                <h3>The crossed-out skills are currently being learned.</h3>
+                <div class="skills-n-1"><i class='bx bxl-html5 html' ></i></div>
+                <div class="skills-n-2"><i class='bx bxl-css3 css' ></i></div>
+                <div class="skills-n-3"><i class='bx bxl-tailwind-css tailwinds' ></i></div>
+                <div class="skills-n-4 english1"><img src="svg/english1.svg" alt="english 1"></div>
+                <div class="skills-n-5"><i class='bx bxl-php php' ></i></div>
+                <div class="skills-n-6"><i class='bx bxl-git git' ></i></div>
+                <div class="skills-n-7"><i class='bx bxl-javascript js' ></i></div>
+                <div class="skills-n-8 french"><img src="svg/french.svg" alt="french"></div>
+                <div class="skills-n-9"><i class='bx bxl-react react' ></i></div>
+                <div class="skills-n-11 API"><img src="svg/api.svg" alt=""></div>
+                <div class="skills-n-16 dutch"><img src="svg/dutch.svg" alt="dutch"></div>
+                <div class="skills-n-13"><i class='bx bxl-nodejs Node-JS' ></i></div>
+                <div class="skills-n-15"><i class='bx bxl-sass SASS' ></i></div>
+                <div class="skills-n-14 EJS"><img src="svg/ejs.svg" alt=""></div>
+                <div class="skills-n-12 english2"><img src="svg/english2.svg" alt="english 2"></div>
+            </div>
+        </div>
     </div>
 
 </section>
@@ -133,6 +214,7 @@
                 <i class="bx bx-code-curly"></i>
                 <h4>Backend Development</h4>
                 <p>I build secure server-side applications and efficient APIs for seamless data flow and user interactions.</p>
+                <p class="comingSoon">Work in progress</p>
             </div>
         </div>
 
@@ -321,10 +403,10 @@
 <footer class="footer">
 
     <div class="social">
-        <a href="#"><i class='bx bxl-linkedin' ></i></a>
-        <a href="#"><i class='bx bxl-github' ></i></a>
-        <a href="#"><i class='bx bxl-discord-alt' ></i></a>
-        <a class="fiverrDiv" href="#"><img class="fiverr" src="/img/fiverr.svg" alt=""></a>
+        <a href="https://www.linkedin.com/in/eric-huybrechts-0860a41b2/" target="_blank" rel="noopener noreferrer"><i class='bx bxl-linkedin' ></i></a>
+        <a href="https://github.com/HUYBERIC" target="_blank" rel="noopener noreferrer"><i class='bx bxl-github' ></i></a>
+        <a class="discordBtn"><i class='bx bxl-discord-alt' ></i><p>Click to copy my ID</p></a>
+        <a class="fiverrDiv" href="https://www.fiverr.com/liliktv?up_rollout=true" target="_blank" rel="noopener noreferrer"><img class="fiverr" src="/img/fiverr.png" alt=""></a>
     </div>
 
     <ul class="list">
@@ -354,6 +436,7 @@
 
 </footer>
 <!-- S C R I P T -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="app.js"></script>

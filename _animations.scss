@@ -1,0 +1,14 @@
+@keyframes checkmark-appear {
+  0% {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0); /* Départ avec scale 0 pour l'effet d'apparition */
+  }
+  60% {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1.2); /* Légère "expansion" */
+  }
+  100% {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1); /* Revenir à l'échelle normale */
+  }
+}

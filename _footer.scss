@@ -27,6 +27,25 @@ footer{
                 box-shadow: 0 0 25px $main-color;
             }
         }
+        .discordBtn{
+            position: relative;
+            cursor: pointer;
+            p{
+                position: absolute;
+                bottom: -40px;
+                left: -25px;
+                text-wrap: nowrap;
+                opacity: 0;
+                font-size: 1rem;
+                transition: 0.3s ease-in-out;
+            }
+            &:hover{
+                p{
+                    opacity: 1;
+                    color: $main-color;
+                }
+            }
+        }
         .fiverrDiv{
             width: 42px;
             height: 42px;
